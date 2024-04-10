@@ -1,0 +1,248 @@
+body{
+    background-color: black;
+    margin-top: 2%;
+}
+footer{
+    color: #F6F6F6;
+}
+.botoes_header{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    justify-content: center;
+    color: #FF577F; 
+    
+}
+.apresentacao_texto{
+    color: #F6F6F6;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    margin-right: 7%;
+    flex-wrap: wrap;    
+}
+.tela_inicial{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+.tela_inicial_esquerdo{
+    display: flex;
+    flex-direction: column;
+}
+hr{
+    border-color: #FF577F;
+}
+.texto_botao{
+    font-family: 'Do Hyeon';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: #FF577F;
+}
+.rede_botao{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 14px;
+    border: 2px solid #FF577F;
+    border-radius: 8px;
+    margin-bottom: 2%;
+    color: white;
+    height: 40px;
+    width: 378px;
+}
+
+.rede_botao:hover{
+    border-color: white;
+}
+.rede_botoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    color: white;
+    margin-top: -9%;
+}
+
+.botoes_header .botao {
+    text-align: center; 
+}
+.botoes_header .botao a .img_header {
+    margin-right: 3px;
+}
+
+.botao{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.botao:hover{
+   border-bottom: 3px solid #FF577F;
+}
+.fotokayky{
+    max-width: 488px;
+    max-height: 552px;
+    border-radius: 9%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin-left: 10%;
+    margin-right: 4%;
+}
+.nome{
+    font-family: 'Do Hyeon';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 56px;
+    letter-spacing: 0.09em;
+    color: #F6F6F6;
+
+}
+.nome strong{
+    color: #FF577F;
+}
+
+image{
+     max-width:200px;
+     max-height:150px;
+     width: auto;
+     height: auto;
+}
+
+.img_insta{
+    max-width:45px;
+    max-height:100px;
+    width: auto;
+    height: auto;
+}
+
+li {
+    list-style-type: none;
+  }
+*{
+    text-decoration: none;
+    color: inherit; 
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    justify-content: center;
+    font-family: 'Lato'; 
+    font-style: normal; 
+    font-weight: 400; 
+    font-size: 16px; 
+    line-height: 36px;
+}
+
+
+
+/*HABILIDADES*/
+
+.habilidades_titulo{
+    color: white;
+    font-family: 'Do Hyeon';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 56px;
+    letter-spacing: 0.09em;
+}
+.habilidades_titulo strong{
+    color: #FF577F;
+}
+.habilidades_texto{
+    color: #F6F6F6;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    margin-right: 7%;
+    flex-wrap: wrap;
+
+}
+.botao_certificados{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 14px;
+    border: 2px solid #FF577F;
+    border-radius: 8px;
+    margin-bottom: 2%;
+    color: white;
+    height: 40px;
+    width: 378px;   
+}
+.habilidades_tela{
+    display: flex;
+    flex-direction: row;
+    margin-top: 6%;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 6%;
+}
+.habilidades_tela_esquerda{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin-right: 8%;
+}
+
+/*PROJETOS*/
+
+.projetos_titulo{
+    color: #F6F6F6;
+    font-family: 'Do Hyeon';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 56px;
+    margin-top: 9%;
+}
+.projetos_titulo strong{
+    color: #FF577F;
+}
+.projetos_texto{
+    color: #F6F6F6;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    margin-right: 7%;
+    flex-wrap: wrap;
+}
+.projetos_tela{
+    margin-top: 6%;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 6%;
+}
+.projetos_imagens{
+    margin-left: 1%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 6%;
+    margin-top: 4%;
+}
+
+.imagem_projeto:hover{
+    border-color: #FF577F;
+    border-radius: 10%;
+}
