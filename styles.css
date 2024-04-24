@@ -1,22 +1,40 @@
-body{
-    background-color: black;
+:root {
+    --cor-primaria: #125360;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #101026;
+}
+
+a {
+    color: var(--cor-primaria); 
+    text-decoration: none; 
+}
+
+a:hover {
+    color: #FFFFFF; 
+}
+
+body {
+    background-color: var(--cor-terciaria);
     margin-top: 2%;
     display: flex;
     flex-direction: column;
+    color: var(--cor-secundaria);
 }
-footer{
-    color: #F6F6F6;
+
+footer {
+    color: var(--cor-secundaria);
 }
-.botoes_header{
+
+.botoes_header {
     display: flex;
     flex-direction: row;
     gap: 5%;
     justify-content: center;
-    color: #FF577F; 
-    
+    color: var(--cor-primaria); 
 }
-.apresentacao_texto{
-    color: #F6F6F6;
+
+.apresentacao_texto {
+    color: var(--cor-secundaria);
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
@@ -25,22 +43,56 @@ footer{
     margin-right: 7%;
     flex-wrap: wrap;    
 }
-.tela_inicial{
+.opcoes_tela_inicial {
+    display: flex;
+    margin-right: 30%;
+    margin-left: 0;
+    flex-direction: row;
+    gap: 20%;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-bottom: 10%;
+    
+}
+
+.opcoes_tela_inicial a {
+    text-decoration: none;
+    color: var(--cor-primaria); /* Use a cor primária definida */
+    font-family: 'Do Hyeon'; /* Use a fonte 'Do Hyeon' ou similar */
+    border: 1px solid var(--cor-primaria); /* Adiciona uma borda sólida */
+    padding: 10px; /* Espaçamento interno */
+    margin-right: 20px;
+    border-radius: 5px; /* Borda arredondada */
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+    transition: background-color 0.3s ease; /* Transição suave para hover */
+}
+
+.opcoes_tela_inicial a:hover {
+    background-color: var(--cor-primaria); 
+    color: #FFFFFF; 
+    cursor: pointer;
+}
+.tela_inicial_texto{
+    font-family: 'Do Hyeon';
+    margin-top: 4%;
+    font-size: 20px;
+}
+
+.tela_inicial {
     display: flex;
     flex-direction: row;
+    justify-content: center; 
+    align-items: flex-end;
     margin-top: 4%;
     margin-bottom: 4%;
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-right: 0%;
+    margin-left: 10%;
+    width: 80%;
+
 }
-.tela_inicial_esquerdo{
-    display: flex;
-    flex-direction: column;
-}
-hr{
-    border-color: #FF577F;
-}
-.texto_botao{
+
+
+.texto_botao {
     font-family: 'Do Hyeon';
     font-style: normal;
     font-weight: 400;
@@ -48,82 +100,98 @@ hr{
     line-height: 30px;
     display: flex;
     align-items: center;
-    color: #FF577F;
+    color: var(--cor-primaria);
 }
-.rede_botao{
+
+.rede_botao {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 10px;
     gap: 14px;
-    border: 2px solid #FF577F;
+    border: 2px solid var(--cor-primaria);
     border-radius: 8px;
     margin-bottom: 2%;
-    color: white;
+    color: var(--cor-secundaria);
     height: 40px;
     width: 378px;
 }
 
-.rede_botao:hover{
-    border-color: white;
+.rede_botao:hover {
+    border-color: var(--cor-secundaria);
 }
-.rede_botoes{
+
+.rede_botoes {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 16px;
-    color: white;
+    color: var(--cor-secundaria);
     margin-top: -9%;
 }
 
-.botoes_header .botao {
-    text-align: center; 
-}
-.botoes_header .botao a .img_header {
-    margin-right: 3px;
-}
-
-.botao{
-    display: flex;
+.about_me_ap{
+    font-size: 20px;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
-.botao:hover{
-   border-bottom: 3px solid #FF577F;
+.botao:hover {
+    border-bottom: 3px solid var(--cor-primaria);
 }
-.fotokayky{
+
+.fotokayky {
     max-width: 488px;
     max-height: 552px;
     border-radius: 9%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     margin-left: 10%;
-    margin-right: 4%;
+    margin-right: 0%;
 }
-.nome{
+
+.about-me{
+    display: flex;
+    flex-direction: row;
+    padding: 4%;
+    gap: 6%;
+}
+.img_code{
+    border-radius: 9%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    max-width: fit-content;
+    max-width: 100%;
+}
+
+.nome {
     font-family: 'Do Hyeon';
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
+    margin-right: 20px;
+    font-size: 50px;
     line-height: 56px;
     letter-spacing: 0.09em;
-    color: #F6F6F6;
-
+    color: var(--cor-secundaria);
 }
-.nome strong{
-    color: #FF577F;
+.tela_inicial_esquerdo h3 {
+    color: #FF5733;
 }
 
-image{
+
+
+.nome strong {
+    color: var(--cor-primaria);
+}
+
+.image {
      max-width:200px;
      max-height:150px;
      width: auto;
      height: auto;
 }
 
-.img_insta{
+.img_insta {
     max-width:45px;
     max-height:100px;
     width: auto;
@@ -132,13 +200,9 @@ image{
 
 li {
     list-style-type: none;
-  }
-*{
-    text-decoration: none;
-    color: inherit; 
 }
 
-footer{
+footer {
     display: flex;
     align-items: center;
     margin-top: 2%;
@@ -150,12 +214,10 @@ footer{
     line-height: 36px;
 }
 
+/* HABILIDADES */
 
-
-/*HABILIDADES*/
-
-.habilidades_titulo{
-    color: white;
+.habilidades_titulo {
+    color: var(--cor-secundaria);
     font-family: 'Do Hyeon';
     font-style: normal;
     font-weight: 400;
@@ -163,11 +225,13 @@ footer{
     line-height: 56px;
     letter-spacing: 0.09em;
 }
-.habilidades_titulo strong{
-    color: #FF577F;
+
+.habilidades_titulo strong {
+    color: var(--cor-primaria);
 }
-.habilidades_texto{
-    color: #F6F6F6;
+
+.habilidades_texto {
+    color: var(--cor-secundaria);
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
@@ -175,23 +239,34 @@ footer{
     line-height: 36px;
     margin-right: 7%;
     flex-wrap: wrap;
-
 }
-.botao_certificados{
+
+.botao_certificados {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 10px;
     gap: 14px;
-    border: 2px solid #FF577F;
+    border: 2px solid var(--cor-primaria);
     border-radius: 8px;
     margin-bottom: 2%;
-    color: white;
+    color: var(--cor-secundaria);
     height: 40px;
     width: 378px;   
 }
-.habilidades_tela{
+
+.tela_inicial_esquerdo {
+    position: absolute;
+    left: 4%; /* Define a posição inicial à esquerda */
+    top: 50%; /* Alinha o topo com metade da altura do pai */
+    transform: translateY(-50%); /* Move o elemento para cima pela metade da sua própria altura */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.habilidades_tela {
     display: flex;
     flex-direction: row;
     margin-top: 6%;
@@ -199,17 +274,18 @@ footer{
     margin-right: 7%;
     margin-bottom: 6%;
 }
-.habilidades_tela_esquerda{
+
+.habilidades_tela_esquerda {
     display: flex;
     align-items: start;
     flex-direction: column;
     margin-right: 8%;
 }
 
-/*PROJETOS*/
+/* PROJETOS */
 
-.projetos_titulo{
-    color: #F6F6F6;
+.projetos_titulo {
+    color: var(--cor-secundaria);
     font-family: 'Do Hyeon';
     font-style: normal;
     font-weight: 400;
@@ -217,11 +293,13 @@ footer{
     line-height: 56px;
     margin-top: 9%;
 }
-.projetos_titulo strong{
-    color: #FF577F;
+
+.projetos_titulo strong {
+    color: var(--cor-primaria);
 }
-.projetos_texto{
-    color: #F6F6F6;
+
+.projetos_texto {
+    color: var(--cor-secundaria);
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
@@ -230,13 +308,15 @@ footer{
     margin-right: 7%;
     flex-wrap: wrap;
 }
-.projetos_tela{
+
+.projetos_tela {
     margin-top: 6%;
     margin-left: 7%;
     margin-right: 7%;
     margin-bottom: 6%;
 }
-.projetos_imagens{
+
+.projetos_imagens {
     margin-left: 1%;
     display: flex;
     justify-content: space-between;
@@ -244,26 +324,27 @@ footer{
     margin-top: 4%;
 }
 
-.imagem_projeto:hover{
-    border-color: #FF577F;
+.imagem_projeto:hover {
+    border-color: var(--cor-primaria);
     border-radius: 10%;
 }
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
-body{
+
+body {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #101026;
+    background: var(--cor-terciaria);
 }
-section{
+
+section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -273,22 +354,26 @@ section{
     width: 500px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-section h2{
-    color: #f5f5f5;
+
+section h2 {
+    color: var(--cor-secundaria);
     font-size: 2.5rem;
     margin: 2rem;
 }
-section form{
+
+section form {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-form label{
-    color: #f5f5f5;
+
+form label {
+    color: var(--cor-secundaria);
     font-size: 17px;
     margin-bottom: 4px;
 }
-form input{
+
+form input {
     padding: 15px;
     outline: none;
     border: 0;
@@ -296,10 +381,12 @@ form input{
     font-size: 15px;
     transition: all 0.5s;
 }
-form input:focus{
+
+form input:focus {
     border-radius: 16px;
 }
-form textarea{
+
+form textarea {
     padding: 10px;
     outline: none;
     border: 0;
@@ -307,56 +394,77 @@ form textarea{
     margin-bottom: 30px;
     transition: all 0.5s;
 }
-form textarea:focus{
+
+form textarea:focus {
     border-radius: 16px;
 }
-form button{
+
+form button {
     padding: 15px;
     cursor: pointer;
     font-size: 16px;
     background: transparent;
-    border: 2px solid #f5f5f5;
-    color: #f5f5f5;
+    border: 2px solid var(--cor-secundaria);
+    color: var(--cor-secundaria);
     transition: all 1s;
     margin-bottom: 20px;
 }
-form button:hover{
-    background: #f5f5f5;
-    color: #101026;
+
+form button:hover {
+    background: var(--cor-secundaria);
+    color: var(--cor-terciaria);
     border-radius: 16px;
 }
 
-/*Página do Obrigado*/
+/* Página do Obrigado */
 
-.main{
+.main {
    display: flex;
    align-items: center;
    justify-content: center;
    min-height: 100vh;
-   background: #101026;
+   background: var(--cor-terciaria);
    flex-direction: column;
 }
-.text{
+
+.text {
     font-size: 45px;
-    color: #f5f5f5;
+    color: var(--cor-secundaria);
     margin-bottom: 30px;
 }
-.paragrafo{
-    color: #f5f5f5;
+
+.paragrafo {
+    color: var(--cor-secundaria);
     margin-bottom: 50px;
 }
-.btn{
+
+.btn {
     padding: 15px 55px;
-    background: #f5f5f5;
+    background: var(--cor-secundaria);
     text-decoration: none;
-    color: #101026;
+    color: var(--cor-terciaria);
     font-size: 18px;
     transition: all 0.5s;
 }
-.btn:hover{
+
+.btn:hover {
     border-radius: 16px;
 }
 
-.header_contato{
+.header_contato {
     margin-bottom: 4%;
+}
+
+.container_botao{
+    display: inline-block;
+    vertical-align: top; /* Alinha os containers verticalmente */
+    margin-right: 10px; /* Espaço entre os containers */
+}
+
+.selecao_botao{
+    cursor: pointer;
+}
+
+.img_logo{
+    width: 100px;
 }

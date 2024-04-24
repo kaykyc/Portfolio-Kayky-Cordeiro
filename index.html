@@ -9,6 +9,7 @@
 <body>
     <header>
         <ul class="botoes_header">
+            <img src="img/logoclara.png" alt="logo com nome Kayky Cordeiro" class="img_logo">
             <li class="botao"><a href="/" class="texto_botao" ><img src="img/home.png" alt="logo de uma casa" class="img_header">Home</a></li>
             <li class="botao"><a href="./habilidades.html" class="texto_botao"><img src="img/hab.png" alt="logo de um computador"class="img_header">Habilidades</a></li>
             <li class="botao"><a href="./projetos.html" class="texto_botao"><img src="img/proj.png" alt="logo de um coracao"class="img_header">Projetos</a></li>
@@ -16,25 +17,62 @@
         </ul>
     </header>
     <div class="tela_inicial">
-    <div class="tela_inicial_esquerdo">
-        <h class="nome"><strong>Kayky</strong> Cordeiro</h>
-        <p class="apresentacao_texto">Olá! Sou a Mi! Vivamus urna nisi, lobortis ut euismod in, sollicitudin ac ipsum. 
-            Mauris a libero id velit pulvinar scelerisque at quis magna. Olá! Sou a Mi! Vivamus urna nisi, lobortis ut euismod in, sollicitudin ac ipsum. 
-            Mauris a libero id velit pulvinar scelerisque at quis magna. 
-            Aliquam erat volutpat.</p>
-            <p>Acesse minhas redes:</p>
-            <ul class="rede_botoes">
+        <div class="tela_inicial_esquerdo">
+            <h1 class="nome"><strong>Kayky Cordeiro</strong></h1>
+            <h3 class="nome"><strong><span id="nome">Desenvolvedor de software</span></strong></h3>
+            <p class="tela_inicial_texto">LKJSSAJSA KASJSAJSAKSAJSA KSAJSKAJSAKSJKAS </p>
+        </div>
+    
+        <li class="opcoes_tela_inicial">
+            <a href="contato.html">CONTATO</a>
+            <a>CURRÍCULO</a>
+        </li>
+
+    <img src="./img/fotokayky.jpg" alt="foto do kayky" class="fotokayky">
+
+  
+    <div>
+    </div>
+    </div>
+    <div class="about-me">
+        <img src="img/code.JPEG" alt="imagem de um codigo HTML"class="img_code">
+            <div class="about_me_ap">
+                <h1> SOBRE MIM</h1>
+                <p>class="apresentacao_texto">Olá! Sou a Mi! Vivamus urna nisi, lobortis ut euismod in, sollicitudin ac ipsum. 
+                Mauris a libero id velit pulvinar scelerisque at quis magna. Olá! Sou a Mi! Vivamus urna nisi, lobortis ut euismod in, sollicitudin ac ipsum. 
+                Mauris a libero id velit pulvinar scelerisque at quis magna. 
+                Aliquam erat volutpat.</p> 
+            </div>
+            <!-- <p>Acesse minhas redes:</p> -->
+            <!-- <ul class="rede_botoes">
                 <p>Acesse minhas redes: </p>
                 <li class="rede_botao"><a href="https://github.com/kaykyc" target="_blank"><img src="./img/github.jpg" alt="Logo do github" class="nome_rede">Github</a></li>
                 <li class="rede_botao"><a href="https://instagram.com/kaykycord" target="_blank"><img src="img/instagram_icon_logo.png" class="img_insta" alt="Logo do instagram">Instagram</a></li>
                 <li class="rede_botao"><a href="https://linkedin.com/in/kaykyc" target="_blank"><img src="img/linkedin.png" alt="Logo do LinkdIn">LinkedIn</a></li>
+            </ul> -->
+        </div>
+        <div class="container_botao">
+            <button class="selecao_botao" onclick="toggleOptions('opcoes1')">Botão 1</button>
+            <ul id="opcoes1" class="opcoes" style="display: block;">
+                <li>Opção A</li>
+                <li>Opção B</li>
+                <li>Opção C</li>
             </ul>
-    </div>
-    <img src="./img/fotokayky.jpg" alt="foto do kayky" class="fotokayky">
-    <div>
-    </div>
+        </div>
+        
+        <div class="container_botao">
+            <button class="selecao_botao" onclick="toggleOptions('opcoes2')">Botão 2</button>
+            <ul id="opcoes2" class="opcoes" style="display: none;">
+                <li>Opção X</li>
+                <li>Opção Y</li>
+                <li>Opção Z</li>
+            </ul>
+        </div>
+        
+
     </div>
     <hr />
+    <script src="index.js"></script>
 </body>
 
 <footer>
