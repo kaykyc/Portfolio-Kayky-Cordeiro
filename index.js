@@ -69,3 +69,20 @@ function toggleOptions(id) {
     }
 }
 
+//HEADER
+
+window.addEventListener("scroll", function(){
+    let header = document.querySelector('#header')
+    header.classList.toggle('rolagem', this.window.scrollY> 0)
+})
+
+
+//darkmode
+const chk = document.getElementById('chk')
+
+chk.addEventListener('change', () => {
+  document.body.classList.toggle('dark')
+  modoTexto.textContent = chk.checked ? 'Dark' : 'Light';
+})
+
+

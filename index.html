@@ -7,14 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <ul class="botoes_header">
-            <img src="img/logoclara.png" alt="logo com nome Kayky Cordeiro" class="img_logo">
-            <li class="botao"><a href="/" class="texto_botao" ><img src="img/home.png" alt="logo de uma casa" class="img_header">Home</a></li>
-            <li class="botao"><a href="./habilidades.html" class="texto_botao"><img src="img/hab.png" alt="logo de um computador"class="img_header">Habilidades</a></li>
-            <li class="botao"><a href="./projetos.html" class="texto_botao"><img src="img/proj.png" alt="logo de um coracao"class="img_header">Projetos</a></li>
-            <li class="botao"><a href="./contato.html" class="texto_botao"><img src="img/proj.png" alt="logo de um coracao"class="img_header">Contato</a></li>
-        </ul>
+    <header class="header" id="header">
+        <nav>
+            <ul class="botoes_header">
+                <!-- <img src="img/logoescura.png" alt="logo com nome Kayky Cordeiro" class="img_logo"> -->
+                <li class="botao"><a href="/" class="texto_botao" >
+                    <!-- <img src="img/home.png" alt="logo de uma casa" class="img_header">  -->
+                    Home</a></li>
+                <li class="botao"><a href="./habilidades.html" class="texto_botao">
+                    <!-- <img src="img/hab.png" alt="logo de um computador"class="img_header"> -->
+                    Habilidades</a></li>
+                <li class="botao"><a href="./projetos.html" class="texto_botao">
+                    <!-- <img src="img/proj.png" alt="logo de um coracao"class="img_header"> -->
+                    Projetos</a></li>
+                <li class="botao"><a href="./contato.html" class="texto_botao">
+                    <!-- <img src="img/mail.png" alt="logo de um email aberto"class="img_header">  -->
+                    Contato</a></li>
+                    <div class="darkmodebotao">
+                        <input type="checkbox" class="checkbox" id="chk" />
+                        <label class="label" for="chk">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div>
+                        </label>
+                        <span id="modoTexto">Light</span> <!-- Texto que mudará dependendo do modo -->
+                    </div>
+            </ul>
+        </nav>
     </header>
     <div class="tela_inicial">
         <div class="tela_inicial_esquerdo">
@@ -24,8 +43,8 @@
         </div>
     
         <li class="opcoes_tela_inicial">
-            <a href="contato.html">CONTATO</a>
-            <a>CURRÍCULO</a>
+            <a href="contato.html" class="opcao_tela_inical">CONTATO</a>
+            <a class="opcao_tela_inical" href="img/curriculo.pdf" download="curriculo.pdf">CURRÍCULO</a>
         </li>
 
     <img src="./img/fotokayky.jpg" alt="foto do kayky" class="fotokayky">
@@ -73,6 +92,7 @@
     </div>
     <hr />
     <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
 </body>
 
 <footer>

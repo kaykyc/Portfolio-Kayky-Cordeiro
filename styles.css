@@ -19,7 +19,60 @@ body {
     display: flex;
     flex-direction: column;
     color: var(--cor-secundaria);
+    transition: background 0.2s linear;
 }
+
+body.dark {
+    background-image: url('./img/dark.jpg');
+}
+.darkmodebotao{
+    margin-left: 10%;
+}
+.checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .label {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+  
+  }
+  
+  
+  .label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+  }
+  
+  .checkbox:checked + .label .ball {
+    transform: translateX(24px);
+  }
+  
+  .fa-moon {
+    color: #f1c40f;
+  }
+  
+  .fa-sun {
+    color: #f39c12;
+  }
 
 footer {
     color: var(--cor-secundaria);
@@ -30,8 +83,54 @@ footer {
     flex-direction: row;
     gap: 5%;
     justify-content: center;
+    align-items: center; 
     color: var(--cor-primaria); 
 }
+
+.header {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 90px; 
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.botoes_header .botao {
+    height: 30px; 
+    line-height: 30px;
+}
+
+.botao{
+    display: flex;
+    margin-left: 9%;
+}
+
+.botoes_header .botao:last-child {
+    margin-right: 0;
+}
+
+@keyframes animabotao {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+
+.opcao_tela_inical:hover{
+    animation-name: animabotao;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 
 .apresentacao_texto {
     color: var(--cor-secundaria);
@@ -54,17 +153,20 @@ footer {
     margin-bottom: 10%;
     
 }
+header.rolagem{
+    background-color: black;
+}
 
 .opcoes_tela_inicial a {
     text-decoration: none;
-    color: var(--cor-primaria); /* Use a cor primária definida */
-    font-family: 'Do Hyeon'; /* Use a fonte 'Do Hyeon' ou similar */
-    border: 1px solid var(--cor-primaria); /* Adiciona uma borda sólida */
-    padding: 10px; /* Espaçamento interno */
+    color: var(--cor-primaria); 
+    font-family: 'Do Hyeon'; 
+    border: 1px solid var(--cor-primaria); 
+    padding: 10px; 
     margin-right: 20px;
-    border-radius: 5px; /* Borda arredondada */
-    margin-bottom: 10px; /* Espaçamento entre os itens */
-    transition: background-color 0.3s ease; /* Transição suave para hover */
+    border-radius: 5px; 
+    margin-bottom: 10px; 
+    transition: background-color 0.3s ease; 
 }
 
 .opcoes_tela_inicial a:hover {
@@ -83,7 +185,7 @@ footer {
     flex-direction: row;
     justify-content: center; 
     align-items: flex-end;
-    margin-top: 4%;
+    margin-top: 8%;
     margin-bottom: 4%;
     margin-right: 0%;
     margin-left: 10%;
@@ -138,9 +240,9 @@ footer {
     align-items: center;
 }
 
-.botao:hover {
+/* .botao:hover {
     border-bottom: 3px solid var(--cor-primaria);
-}
+} */
 
 .fotokayky {
     max-width: 488px;
@@ -258,9 +360,9 @@ footer {
 
 .tela_inicial_esquerdo {
     position: absolute;
-    left: 4%; /* Define a posição inicial à esquerda */
-    top: 50%; /* Alinha o topo com metade da altura do pai */
-    transform: translateY(-50%); /* Move o elemento para cima pela metade da sua própria altura */
+    left: 4%; 
+    top: 50%; 
+    transform: translateY(-50%); 
     display: flex;
     flex-direction: column;
 }
@@ -336,12 +438,26 @@ footer {
     font-family: sans-serif;
 }
 
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: var(--cor-terciaria);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+    background-image: url('./img/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.background-container {
+    position: relative;
+    z-index: 1; /* Para garantir que o conteúdo fique acima da imagem de fundo */
 }
 
 section {
@@ -457,8 +573,8 @@ form button:hover {
 
 .container_botao{
     display: inline-block;
-    vertical-align: top; /* Alinha os containers verticalmente */
-    margin-right: 10px; /* Espaço entre os containers */
+    vertical-align: top; 
+    margin-right: 10px; 
 }
 
 .selecao_botao{
