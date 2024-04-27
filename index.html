@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <header class="header" id="header">
@@ -23,6 +25,12 @@
                 <li class="botao"><a href="./contato.html" class="texto_botao">
                     <!-- <img src="img/mail.png" alt="logo de um email aberto"class="img_header">  -->
                     Contato</a></li>
+        <button class="menu-hamburguer" onclick="toggleMenu()">☰</button>
+        <div class="menu" id="menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+        </div>
                     <div class="darkmodebotao">
                         <input type="checkbox" class="checkbox" id="chk" />
                         <label class="label" for="chk">
@@ -30,7 +38,7 @@
                             <i class="fas fa-sun"></i>
                             <div class="ball"></div>
                         </label>
-                        <span id="modoTexto">Light</span> <!-- Texto que mudará dependendo do modo -->
+                        <span class="modoTexto" id="modoTexto">Light</span> 
                     </div>
             </ul>
         </nav>
@@ -39,7 +47,7 @@
         <div class="tela_inicial_esquerdo">
             <h1 class="nome"><strong>Kayky Cordeiro</strong></h1>
             <h3 class="nome"><strong><span id="nome">Desenvolvedor de software</span></strong></h3>
-            <p class="tela_inicial_texto">LKJSSAJSA KASJSAJSAKSAJSA KSAJSKAJSAKSJKAS </p>
+            <p class="tela_inicial_texto" id="modoTexto">Estudante de Engenharia da Computação, apaixonado por tecnologia.</p>
         </div>
     
         <li class="opcoes_tela_inicial">
@@ -57,7 +65,7 @@
         <img src="img/code.JPEG" alt="imagem de um codigo HTML"class="img_code">
             <div class="about_me_ap">
                 <h1> SOBRE MIM</h1>
-                <p>class="apresentacao_texto">Olá! Sou a Mi! Vivamus urna nisi, lobortis ut euismod in, sollicitudin ac ipsum. 
+                <p class="about_me_texto">class="apresentacao_texto">Olá! Sou a Mi! Vivamus urna nisi, lobortis ut euismod in, sollicitudin ac ipsum. 
                 Mauris a libero id velit pulvinar scelerisque at quis magna. Olá! Sou a Mi! Vivamus urna nisi, lobortis ut euismod in, sollicitudin ac ipsum. 
                 Mauris a libero id velit pulvinar scelerisque at quis magna. 
                 Aliquam erat volutpat.</p> 

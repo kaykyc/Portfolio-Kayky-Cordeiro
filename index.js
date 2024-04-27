@@ -1,17 +1,19 @@
 // Array de textos para serem exibidos e reexibidos
 var textos = [
-    "Desenvolvedor Web",
-    "Apaixonado por Tecnologia",
-    "Teste",
-    "Não sei", 
-    "Olá"
+    "React",
+    'JavaScript',
+    'Java',
+    'SpingBoot',
+    'HTML',
+    'CSS',
+    'Postgree'
 ];
 
 // Índice do texto atual
 var indiceTextoAtual = 0;
 
 // Tempo de espera entre cada caractere (em milissegundos)
-var tempoEspera = 70; // Tempo de espera entre os caracteres
+var tempoEspera = 90; // Tempo de espera entre os caracteres
 
 // Elemento onde o texto será exibido
 var elementoNome = document.getElementById('nome');
@@ -24,7 +26,7 @@ function digitarTexto() {
     var intervalo = setInterval(function() {
         textoAtual += texto[i];
         elementoNome.textContent = textoAtual;
-        elementoNome.style.color = '#FFFFFF'; // Define a cor enquanto digita
+        elementoNome.style.color = '#332F2F'; // Define a cor enquanto digita
         i++;
         if (i >= texto.length) {
             clearInterval(intervalo);
@@ -40,7 +42,7 @@ function reescreverTexto() {
     var intervalo = setInterval(function() {
         var textoAtual = texto.substring(0, i + 1);
         elementoNome.textContent = textoAtual;
-        elementoNome.style.color = '#FFFFFF'; // Define a cor enquanto reescreve
+        elementoNome.style.color = '#332F2F'; // Define a cor enquanto reescreve
         i--;
         if (i < 0) {
             clearInterval(intervalo);
@@ -78,11 +80,29 @@ window.addEventListener("scroll", function(){
 
 
 //darkmode
-const chk = document.getElementById('chk')
+const chk = document.getElementById('chk');
+const header = document.getElementById('header');
+const modoTexto = document.getElementById('modoTexto');
 
 chk.addEventListener('change', () => {
-  document.body.classList.toggle('dark')
+  document.body.classList.toggle('dark');
+  header.classList.toggle('dark');
   modoTexto.textContent = chk.checked ? 'Dark' : 'Light';
-})
+});
+
+
+//toggle menu
+
+function toggleMenu() {
+    var menu = document.getElementById("menu"); // Obtém o elemento do menu
+    if (menu.style.display === "block") {
+        console.log("Menu fechado");
+        menu.style.display = "none"; // Se o menu estiver visível, oculta-o
+    } else {
+        menu.style.display = "block"; // Caso contrário, exibe-o
+        console.log("menu aberto")
+    }
+}
+
 
 
