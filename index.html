@@ -16,10 +16,10 @@
                 <li class="botao"><a href="/" class="texto_botao" >
                     <!-- <img src="img/home.png" alt="logo de uma casa" class="img_header">  -->
                     Home</a></li>
-                <li class="botao"><a href="./habilidades.html" class="texto_botao">
+                <li class="botao"><a href="#habilidades" class="texto_botao">
                     <!-- <img src="img/hab.png" alt="logo de um computador"class="img_header"> -->
                     Habilidades</a></li>
-                <li class="botao"><a href="./projetos.html" class="texto_botao">
+                <li class="botao"><a href="#projetos" class="texto_botao">
                     <!-- <img src="img/proj.png" alt="logo de um coracao"class="img_header"> -->
                     Projetos</a></li>
                 <li class="botao"><a href="./contato.html" class="texto_botao">
@@ -27,9 +27,10 @@
                     Contato</a></li>
         <button class="menu-hamburguer" onclick="toggleMenu()">☰</button>
         <div class="menu" id="menu">
-            <a href="#">Item 1</a>
-            <a href="#">Item 2</a>
-            <a href="#">Item 3</a>
+            <a href="#about-me">Sobre mim</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#projetos">Projetos</a>
+            <a href="./contato.html">Contato</a>
         </div>
                     <div class="darkmodebotao">
                         <input type="checkbox" class="checkbox" id="chk" />
@@ -56,19 +57,24 @@
         </li>
 
     <img src="./img/fotokayky.jpg" alt="foto do kayky" class="fotokayky">
+    </div>
 
-  
-    <div>
-    </div>
-    </div>
-    <div class="about-me">
+    <div class="about-me" id="about-me">
         <img src="img/code.JPEG" alt="imagem de um codigo HTML"class="img_code">
             <div class="about_me_ap">
                 <h1> SOBRE MIM</h1>
-                <p class="about_me_texto">class="apresentacao_texto">Olá! Sou a Mi! Vivamus urna nisi, lobortis ut euismod in, sollicitudin ac ipsum. 
-                Mauris a libero id velit pulvinar scelerisque at quis magna. Olá! Sou a Mi! Vivamus urna nisi, lobortis ut euismod in, sollicitudin ac ipsum. 
-                Mauris a libero id velit pulvinar scelerisque at quis magna. 
-                Aliquam erat volutpat.</p> 
+                <p class="about_me_texto">Me chamo Kayky Cordeiro, tenho 20 anos de idade, sou estudante de Engenharia da Computação
+                    pela Universidade Federal do Maranhão, tenho conhecimento em Backend como Frontend com alguns projetos realizados que
+                    poderá ser visto aqui no meu Portifolio!
+                </p> 
+                <div class="redes_sociais">
+                    <h4>Redes sociais: </h4>
+                    <li class="logos_redes">
+                        <a href="https://www.instagram.com/kaykycord" target="_blank"><img src="/img/instagram.png" class="redes_sociais_img"></a>
+                        <a href="https://www.github.com/kaykyc" target="_blank"><img src="/img/github.png" class="redes_sociais_img"></a>
+                        <a href="https://www.linkedin/in/kaykyc" target="_blank"><img src="/img/linkedin.png" class="redes_sociais_img"></a>
+                    </li>
+                </div>
             </div>
             <!-- <p>Acesse minhas redes:</p> -->
             <!-- <ul class="rede_botoes">
@@ -77,39 +83,48 @@
                 <li class="rede_botao"><a href="https://instagram.com/kaykycord" target="_blank"><img src="img/instagram_icon_logo.png" class="img_insta" alt="Logo do instagram">Instagram</a></li>
                 <li class="rede_botao"><a href="https://linkedin.com/in/kaykyc" target="_blank"><img src="img/linkedin.png" alt="Logo do LinkdIn">LinkedIn</a></li>
             </ul> -->
-    </div class="habilidades">
-      <h1>HABILIDADES</h1>
-      <p>Aqui estão as habilidades que maior possuo</p>
-      <div class="botoes_sobre">
-        <button class="selecao_botao selected" onclick="toggleOptions('opcoes1')">Frontend</button>
-        <button class="selecao_botao" onclick="toggleOptions('opcoes2')">Backend</button>
-        <button class="selecao_botao" onclick="toggleOptions('opcoes3')">Soft Skills</button>
     </div>
-    
-    <div class="opcoes" id="opcoes1" style="display: block;">
-        <ul>
-            <li>Opção A</li>
-            <li>Opção B</li>
-            <li>Opção C</li>
-        </ul>
+        
+    <div class="habilidades" id="habilidades">
+            <h1 class="habilidades_titulo">HABILIDADES</h1>
+            <p class="habilidades_texto">Aqui estão as habilidades que maior possuo</p>
+            <div class="botoes_sobre">
+            <button class="selecao_botao selected" onclick="toggleOptions('opcoes1')">Frontend</button>
+            <button class="selecao_botao" onclick="toggleOptions('opcoes2')">Backend</button>
+            <button class="selecao_botao" onclick="toggleOptions('opcoes3')">Soft Skills</button>
+            </div>
+        
+        
+        <div class="opcoes_container">
+            <div class="opcoes" id="opcoes1" style="display: block;">
+                <ul>
+                    <li>React</li>
+                    <li>JavaScript</li>
+                    <li>bootstrap 5</li>
+                </ul>
+            </div>
+            
+            <div class="opcoes" id="opcoes2" style="display: none;">
+                <ul>
+                    <li>Java</li>
+                    <li>SpringBoot</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+            
+            <div class="opcoes" id="opcoes3" style="display: none;">
+                <ul>
+                    <li>Comunicação</li>
+                    <li>Trabalho em equipe</li>
+                    <li>Pensamento analitico</li>
+                    <li>Resolução de problemas</li>
+                </ul>
+            </div>
+        </div>
     </div>
-    
-    <div class="opcoes" id="opcoes2" style="display: none;">
-        <ul>
-            <li>Opção X</li>
-            <li>Opção Y</li>
-            <li>Opção Z</li>
-        </ul>
-    </div>
-    
-    <div class="opcoes" id="opcoes3" style="display: none;">
-        <ul>
-            <li>Opção A</li>
-            <li>Opção B</li>
-            <li>Opção C</li>
-        </ul>
-    </div>
-    <div>
+
+    <div id="projetos" class="projetos">
     <h1>Projetos realizados:</h1>
         <div class="slideshow-container">
             <div class="slideshow fade">

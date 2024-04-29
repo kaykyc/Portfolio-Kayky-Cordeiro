@@ -37,8 +37,6 @@ header.dark {
     color: #fff; 
 }
 
-
-
 .darkmodebotao{
     margin-left: 10%;
     display: flex;
@@ -335,6 +333,7 @@ h3.nome{
 
 li {
     list-style-type: none;
+    color: black;
 }
 
 footer {
@@ -350,13 +349,14 @@ footer {
 }
 .habilidades{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 6%;
 }
 /* HABILIDADES */
 
 .habilidades_titulo {
-    color: var(--cor-secundaria);
     font-family: 'Do Hyeon';
+    color: black;
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
@@ -369,7 +369,7 @@ footer {
 }
 
 .habilidades_texto {
-    color: var(--cor-secundaria);
+    color: black;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
@@ -377,6 +377,12 @@ footer {
     line-height: 36px;
     margin-right: 7%;
     flex-wrap: wrap;
+}
+.opcoes_container li{
+    display: flex;
+    margin-top: 2%;
+    columns: black;
+    margin-bottom: 4%;
 }
 
 .botao_certificados {
@@ -402,6 +408,7 @@ footer {
     display: flex;
     flex-direction: column;
 }
+
 
 
 .habilidades_tela {
@@ -477,6 +484,7 @@ footer {
 html {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 
 }
 
@@ -495,6 +503,19 @@ body {
     position: relative;
     z-index: 1; /* Para garantir que o conteúdo fique acima da imagem de fundo */
 }
+.redes_sociais_img{
+    max-width: 50px;
+}
+
+.redes_sociais{
+    margin-top: 6%;
+}
+.logos_redes{
+    margin-top: 4%;
+    display: flex;
+    gap: 5%;
+}
+
 
 section {
     display: flex;
@@ -615,8 +636,10 @@ form button:hover {
 
   .botoes_sobre {
     display: flex;
+    gap: 5%;
     flex-direction: row;
-    align-items: flex-start; /* Para alinhar os botões ao topo */
+    align-items: flex-start;
+    margin-top: 2%;
   }
 
   .selecao_botao {
@@ -694,7 +717,9 @@ form button:hover {
     z-index: 999; /* Garante que o menu fique acima do conteúdo */
     display: none; /* Por padrão, o menu está oculto */
 }
-
+.projetos h1{
+    color: black;
+}
 
 /* Estilo para os itens do menu */
 .menu a {
@@ -718,6 +743,9 @@ form button:hover {
     display: none;
 }
 
+.opcoes li{
+    list-style-type: square;
+}
 /* CARROSSEL */
 
 .slideshow-container {
@@ -823,6 +851,9 @@ form button:hover {
 @media only screen and (max-width: 600px) {
     .header {
     }
+    .projetos{
+        padding: 6%;
+    }
 
     .slideshow-container{
         width: 100%;
@@ -852,7 +883,7 @@ form button:hover {
     }
 
     .tela_inicial_esquerdo{
-        margin-top: -185px;
+        top: 25%; 
         padding: 6%;
         
     }
@@ -868,6 +899,13 @@ form button:hover {
         padding: 7%;
         margin-right: 0;
         gap: 8%;
+    }
+
+    .opcoes li{
+        margin-top: 3%;
+        color: black;
+        display: flex;
+        gap: 3%;
     }
 
     .about-me{

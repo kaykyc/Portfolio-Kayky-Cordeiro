@@ -4,9 +4,9 @@ var textos = [
     'JavaScript',
     'Java',
     'SpingBoot',
-    'HTML',
-    'CSS',
-    'Postgree'
+    'Postgree',
+    'Python',
+    'Bootstrap 5'
 ];
 
 // Índice do texto atual
@@ -26,11 +26,11 @@ function digitarTexto() {
     var intervalo = setInterval(function() {
         textoAtual += texto[i];
         elementoNome.textContent = textoAtual;
-        elementoNome.style.color = '#332F2F'; // Define a cor enquanto digita
+        elementoNome.style.color = '#332F2F'; 
         i++;
         if (i >= texto.length) {
             clearInterval(intervalo);
-            setTimeout(reescreverTexto, 100); // Espera 100 milissegundos antes de começar a reescrever o texto
+            setTimeout(reescreverTexto, 100); 
         }
     }, tempoEspera);
 }
@@ -42,14 +42,14 @@ function reescreverTexto() {
     var intervalo = setInterval(function() {
         var textoAtual = texto.substring(0, i + 1);
         elementoNome.textContent = textoAtual;
-        elementoNome.style.color = '#332F2F'; // Define a cor enquanto reescreve
+        elementoNome.style.color = '#332F2F'; 
         i--;
         if (i < 0) {
             clearInterval(intervalo);
-            indiceTextoAtual = (indiceTextoAtual + 1) % textos.length; // Avança para o próximo texto no array
-            digitarTexto(); // Começa a exibir o próximo texto imediatamente
+            indiceTextoAtual = (indiceTextoAtual + 1) % textos.length; 
+            digitarTexto(); 
         }
-    }, tempoEspera / 2); // Tempo de espera reduzido para a metade
+    }, tempoEspera / 2); 
 }
 
 
@@ -60,9 +60,9 @@ function toggleOptions(id) {
     var buttons = document.getElementsByClassName('selecao_botao');
     for (var i = 0; i < buttons.length; i++) {
         if (buttons[i].id === id) {
-            buttons[i].classList.add('selected'); // Adiciona a classe 'selected' ao botão clicado
+            buttons[i].classList.add('selected'); 
         } else {
-            buttons[i].classList.remove('selected'); // Remove a classe 'selected' dos outros botões
+            buttons[i].classList.remove('selected'); 
         }
     }
 
@@ -111,6 +111,22 @@ function toggleMenu() {
         menuButton.textContent = "✕"; // Altera de "☰" para "x" quando o menu é aberto
     }
 }
+
+document.addEventListener("click", function(event) {
+    var menu = document.getElementById("menu");
+    var menuButton = document.querySelector(".menu-hamburguer");
+
+    // Verifica se o clique ocorreu dentro do menu ou do botão do menu
+    var isClickInsideMenu = menu.contains(event.target);
+    var isClickInsideMenuButton = menuButton.contains(event.target);
+
+    // Se o clique não ocorreu dentro do menu ou do botão do menu, fecha o menu
+    if (!isClickInsideMenu && !isClickInsideMenuButton) {
+        menu.style.display = "none";
+        menuButton.textContent = "☰"; // Altera o ícone do botão para ☰
+    }
+});
+
 
 
 //CARROSSEL
