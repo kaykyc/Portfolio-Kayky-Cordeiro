@@ -261,9 +261,6 @@ header.rolagem.dark{
     align-items: center;
 }
 
-/* .botao:hover {
-    border-bottom: 3px solid var(--cor-primaria);
-} */
 
 .fotokayky {
     max-width: 488px;
@@ -501,7 +498,7 @@ body {
 
 .background-container {
     position: relative;
-    z-index: 1; /* Para garantir que o conteúdo fique acima da imagem de fundo */
+    z-index: 1; 
 }
 .redes_sociais_img{
     max-width: 50px;
@@ -657,40 +654,40 @@ form button:hover {
     font-size: 24px;
     color: #333;
     padding: 10px;
-    z-index: 1000; /* Garante que o ícone fique acima do conteúdo */
+    z-index: 1000; 
 }
 
 .menu-hamburguer:focus {
-    outline: none; /* Remove a borda ao clicar no botão */
-}
-/* Estilo para os botões */
-.selecao_botao {
-    cursor: pointer;
-    border: none; /* Removendo a borda padrão do botão */
-    background: none; /* Removendo o fundo do botão */
-    padding: 0;
-    margin: 0;
-    text-decoration: none; /* Removendo a decoração de texto */
+    outline: none; 
 }
 
-/* Estilo para a linha sob o botão selecionado */
+.selecao_botao {
+    cursor: pointer;
+    border: none; 
+    background: none; 
+    padding: 0;
+    margin: 0;
+    text-decoration: none; 
+}
+
+
 .selecao_botao.selected::after {
     content: '';
     display: block;
     width: 100%;
-    border-bottom: 2px solid black; /* Cor e espessura da linha */
-    transition: width 0.3s ease; /* Adicionando uma transição suave */
-    margin-top: 2px; /* Espaçamento entre o texto e a linha */
+    border-bottom: 2px solid black; 
+    transition: width 0.3s ease; 
+    margin-top: 2px; 
 }
 
 
-/* Estilo para a linha sob o botão quando estiver selecionado */
+
 .selecao_botao.selected::after {
-    width: 100%; /* Quando o botão está selecionado, a linha se estende */
+    width: 100%; 
 }
 
 
-/* Estilo para as linhas do ícone do menu hambúrguer */
+
 .menu-hamburguer .bar {
     display: block;
     width: 25px;
@@ -701,7 +698,11 @@ form button:hover {
 }
 
 .menu-hamburguer:hover .bar {
-    background-color: #555; /* Mudança de cor ao passar o mouse */
+    background-color: #555; 
+}
+
+.footer_texto{
+    color: #111;
 }
 
 /* Estilo para o menu */
@@ -714,8 +715,8 @@ form button:hover {
     color: #fff;
     margin-top: 20%;
     padding: 20px;
-    z-index: 999; /* Garante que o menu fique acima do conteúdo */
-    display: none; /* Por padrão, o menu está oculto */
+    z-index: 999; 
+    display: none; 
 }
 .projetos h1{
     color: black;
