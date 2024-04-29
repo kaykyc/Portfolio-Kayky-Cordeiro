@@ -57,19 +57,25 @@ function reescreverTexto() {
 digitarTexto();
 
 function toggleOptions(id) {
+    var buttons = document.getElementsByClassName('selecao_botao');
+    for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].id === id) {
+            buttons[i].classList.add('selected'); // Adiciona a classe 'selected' ao botão clicado
+        } else {
+            buttons[i].classList.remove('selected'); // Remove a classe 'selected' dos outros botões
+        }
+    }
+
     var options = document.getElementsByClassName('opcoes');
     for (var i = 0; i < options.length; i++) {
         if (options[i].id === id) {
-            if (options[i].style.display === 'block') {
-                options[i].style.display = 'none'; // Esconde as opções se estiverem visíveis
-            } else {
-                options[i].style.display = 'block'; // Mostra as opções se estiverem ocultas
-            }
+            options[i].style.display = 'block';
         } else {
-            options[i].style.display = 'none'; // Esconde as outras opções
+            options[i].style.display = 'none';
         }
     }
 }
+
 
 //HEADER
 
@@ -94,15 +100,64 @@ chk.addEventListener('change', () => {
 //toggle menu
 
 function toggleMenu() {
-    var menu = document.getElementById("menu"); // Obtém o elemento do menu
+    var menu = document.getElementById("menu");
+    var menuButton = document.querySelector(".menu-hamburguer");
+
     if (menu.style.display === "block") {
-        console.log("Menu fechado");
-        menu.style.display = "none"; // Se o menu estiver visível, oculta-o
+        menu.style.display = "none";
+        menuButton.textContent = "☰"; // Altera de "x" para "☰" quando o menu é fechado
     } else {
-        menu.style.display = "block"; // Caso contrário, exibe-o
-        console.log("menu aberto")
+        menu.style.display = "block";
+        menuButton.textContent = "✕"; // Altera de "☰" para "x" quando o menu é aberto
     }
 }
 
 
+//CARROSSEL
+let slides = document.querySelectorAll('.slideshow');
+        let dots = document.querySelectorAll('.dot');
+        let slideIndex = 1;
+        let timeoutID;
+        const showSlides = (n) => {
+            let i;
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < slides.length; i++) {
+                dots[i].setAttribute('class', 'dot');
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            dots[slideIndex - 1].setAttribute('class', 'dot ativo');
+            clearTimeout(timeoutID);
+            timeoutID = setTimeout(autoSlides, 4000);
+        };
+        const plusSlides = (n) => {
+            showSlides(slideIndex += n);
+        };
+        const currentSlide = (n) => {
+            showSlides(slideIndex = n);
+        };
+        function autoSlides() {
+            let i;
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            for (i = 0; i < slides.length; i++) {
+                dots[i].setAttribute('class', 'dot');
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].setAttribute('class', 'dot ativo');
+            timeoutID = setTimeout(autoSlides, 4000);
+        }
+        autoSlides();
 

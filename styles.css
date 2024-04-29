@@ -348,7 +348,10 @@ footer {
     font-size: 16px; 
     line-height: 36px;
 }
-
+.habilidades{
+    display: flex;
+    flex-direction: row;
+}
 /* HABILIDADES */
 
 .habilidades_titulo {
@@ -499,13 +502,13 @@ section {
     justify-content: center;
     flex-direction: column;
     padding: 10px 45px;
-    background: #1d1d2e;
-    width: 500px;
+    /* background: #1d1d2e; */
+    margin-top: 5%;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 section h2 {
-    color: var(--cor-secundaria);
+    color: black;
     font-size: 2.5rem;
     margin: 2rem;
 }
@@ -517,7 +520,7 @@ section form {
 }
 
 form label {
-    color: var(--cor-secundaria);
+    color:black;
     font-size: 17px;
     margin-bottom: 4px;
 }
@@ -554,7 +557,7 @@ form button {
     font-size: 16px;
     background: transparent;
     border: 2px solid var(--cor-secundaria);
-    color: var(--cor-secundaria);
+    color: black;
     transition: all 1s;
     margin-bottom: 20px;
 }
@@ -604,19 +607,26 @@ form button:hover {
     margin-bottom: 4%;
 }
 
-.container_botao{
+.container_botao {
     display: inline-block;
-    vertical-align: top; 
-    margin-right: 10px; 
-}
+    vertical-align: top;
+    margin-right: 10px;
+  }
 
-.selecao_botao{
+  .botoes_sobre {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Para alinhar os botões ao topo */
+  }
+
+  .selecao_botao {
     cursor: pointer;
-}
+  }
 
 .img_logo{
     width: 100px;
 }
+
 .menu-hamburguer {
     background-color: transparent;
     border: none;
@@ -630,6 +640,32 @@ form button:hover {
 .menu-hamburguer:focus {
     outline: none; /* Remove a borda ao clicar no botão */
 }
+/* Estilo para os botões */
+.selecao_botao {
+    cursor: pointer;
+    border: none; /* Removendo a borda padrão do botão */
+    background: none; /* Removendo o fundo do botão */
+    padding: 0;
+    margin: 0;
+    text-decoration: none; /* Removendo a decoração de texto */
+}
+
+/* Estilo para a linha sob o botão selecionado */
+.selecao_botao.selected::after {
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid black; /* Cor e espessura da linha */
+    transition: width 0.3s ease; /* Adicionando uma transição suave */
+    margin-top: 2px; /* Espaçamento entre o texto e a linha */
+}
+
+
+/* Estilo para a linha sob o botão quando estiver selecionado */
+.selecao_botao.selected::after {
+    width: 100%; /* Quando o botão está selecionado, a linha se estende */
+}
+
 
 /* Estilo para as linhas do ícone do menu hambúrguer */
 .menu-hamburguer .bar {
@@ -653,10 +689,12 @@ form button:hover {
     width: 100%;
     background-color: #333;
     color: #fff;
+    margin-top: 20%;
     padding: 20px;
     z-index: 999; /* Garante que o menu fique acima do conteúdo */
     display: none; /* Por padrão, o menu está oculto */
 }
+
 
 /* Estilo para os itens do menu */
 .menu a {
@@ -680,8 +718,114 @@ form button:hover {
     display: none;
 }
 
+/* CARROSSEL */
+
+.slideshow-container {
+    
+    width: 50%;
+    position: relative;
+    margin: auto;
+}
+.slideshow {
+    display: none;
+}
+.slideshow img { width:100%; }
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.legenda {
+    width: auto;
+    color: #fdfdfd;
+    font-size: 0.9em;
+    padding:5px;
+    position: absolute;
+    bottom: 18%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 10%;
+}
+.numeracao {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.paginacao { 
+  
+    width:100%; 
+    float:left;
+    margin: 10px 0;
+    text-align: center;
+}
+.dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 4px;
+    border-radius: 50px;
+    background-color: #007cff;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.ativo,
+.dot:hover {
+    background-color: #242424;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/*960PX BREAKPOINT - Ajustando o texto para desktop*/
+@media (min-width:60em){
+    .legenda   { font-size:2em; padding:8px; }
+    .paginacao { margin:20px 0; }
+    .dot       { width:18px; height:18px; }
+}
+
 @media only screen and (max-width: 600px) {
     .header {
+    }
+
+    .slideshow-container{
+        width: 100%;
     }
     .botao{
         display: none;
@@ -734,5 +878,8 @@ form button:hover {
     .about_me_ap{
         margin-top: 5%;
         font-size: 1.2rem;
+    }
+    section{
+        margin-top: 25%;
     }
 }
