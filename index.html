@@ -12,18 +12,13 @@
     <header class="header" id="header">
         <nav>
             <ul class="botoes_header">
-                <!-- <img src="img/logoescura.png" alt="logo com nome Kayky Cordeiro" class="img_logo"> -->
                 <li class="botao"><a href="/" class="texto_botao" >
-                    <!-- <img src="img/home.png" alt="logo de uma casa" class="img_header">  -->
                     Home</a></li>
                 <li class="botao"><a href="#habilidades" class="texto_botao">
-                    <!-- <img src="img/hab.png" alt="logo de um computador"class="img_header"> -->
                     Habilidades</a></li>
                 <li class="botao"><a href="#projetos" class="texto_botao">
-                    <!-- <img src="img/proj.png" alt="logo de um coracao"class="img_header"> -->
                     Projetos</a></li>
                 <li class="botao"><a href="./contato.html" class="texto_botao">
-                    <!-- <img src="img/mail.png" alt="logo de um email aberto"class="img_header">  -->
                     Contato</a></li>
         <button class="menu-hamburguer" onclick="toggleMenu()">☰</button>
         <div class="menu" id="menu">
@@ -70,9 +65,9 @@
                 <div class="redes_sociais">
                     <h4>Redes sociais: </h4>
                     <li class="logos_redes">
-                        <a href="https://www.instagram.com/kaykycord" target="_blank"><img src="/img/instagram.png" class="redes_sociais_img"></a>
-                        <a href="https://www.github.com/kaykyc" target="_blank"><img src="/img/github.png" class="redes_sociais_img"></a>
-                        <a href="https://www.linkedin/in/kaykyc" target="_blank"><img src="/img/linkedin.png" class="redes_sociais_img"></a>
+                        <a href="https://www.instagram.com/kaykycord" target="_blank"><img src="/img/instagram.png" class="redes_sociais_img" id="img_rede" alt="logo instagram"></a>
+                        <a href="https://www.github.com/kaykyc" target="_blank"><img src="/img/github.png" class="redes_sociais_img" id="img_rede" alt="logo github"></a>
+                        <a href="https://www.linkedin/in/kaykyc" target="_blank"><img src="/img/linkedin.png" class="redes_sociais_img"alt="logo linkedin"></a>
                     </li>
                 </div>
             </div>
@@ -80,7 +75,7 @@
         
     <div class="habilidades" id="habilidades">
             <h1 class="habilidades_titulo">HABILIDADES</h1>
-            <p class="habilidades_texto">Aqui estão as habilidades que maior possuo</p>
+            <p class="habilidades_texto">Minhas principais habilidades incluem:</p>
             <div class="botoes_sobre">
             <button class="selecao_botao selected" onclick="toggleOptions('opcoes1')">Frontend</button>
             <button class="selecao_botao" onclick="toggleOptions('opcoes2')">Backend</button>
@@ -93,7 +88,7 @@
                 <ul>
                     <li>React</li>
                     <li>JavaScript</li>
-                    <li>bootstrap 5</li>
+                    <li>Bootstrap 5</li>
                 </ul>
             </div>
             
@@ -118,7 +113,7 @@
     </div>
 
     <div id="projetos" class="projetos">
-    <h1>Projetos realizados:</h1>
+    <h1>PROJETOS REALIZADOS:</h1>
         <div class="slideshow-container">
             <div class="slideshow fade">
                 <div class="numeracao">1 / 3</div>
@@ -151,11 +146,18 @@
     <hr />
     <script src="index.js"></script>
     <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+
+    <div class="whatsapp-btn">
+        <a href="https://wa.me/98992156403" target="_blank">
+          <img src="img/whatsapp.png" alt="WhatsApp logo">
+        </a>
+      </div>
+      
 </body>
 
 <footer>
     <div>
-        <img src="./img/aluraInclude.png">
+        <img src="./img/aluraInclude.png" alt="logo Alura Include">
         <p class="footer_texto">Desenvolvido por Kayky Cordeiro</p>
     </div>
 </footer>
