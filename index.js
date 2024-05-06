@@ -123,16 +123,44 @@ window.addEventListener("scroll", function(){
 })
 
 
-//darkmode
 const chk = document.getElementById('chk');
-const header = document.getElementById('header');
 const modoTexto = document.getElementById('modoTexto');
+const imagens = document.querySelectorAll('#img_rede', '#menu-hamburguer');
 
 chk.addEventListener('change', () => {
   document.body.classList.toggle('dark');
-  header.classList.toggle('dark');
   modoTexto.textContent = chk.checked ? 'Dark' : 'Light';
+
+  if (chk.checked) {
+    // Modo escuro
+    document.documentElement.style.setProperty('--cor-fonte', '#fff');
+    document.documentElement.style.setProperty('--cor-background', '#333');
+    
+    // Mudança na cor das imagens para branco
+    imagens.forEach(imagem => {
+      imagem.style.filter = "brightness(0) invert(1)";
+    });
+
+    // Mudança na cor do botão do menu hamburguer para branco
+    const menuHamburguer = document.querySelector('.menu-hamburguer');
+    menuHamburguer.style.color = '#fff';
+  } else {
+    // Modo claro
+    document.documentElement.style.setProperty('--cor-fonte', '#333');
+    document.documentElement.style.setProperty('--cor-background', '#fff');
+
+    // Revertendo a cor das imagens
+    imagens.forEach(imagem => {
+      imagem.style.filter = "none";
+    });
+
+    // Revertendo a cor do botão do menu hamburguer
+    const menuHamburguer = document.querySelector('.menu-hamburguer');
+    menuHamburguer.style.color = '#000'; // Cor original do botão (preto)
+  }
 });
+
+
 
 
 //toggle menu
@@ -149,6 +177,7 @@ function toggleMenu() {
         menuButton.textContent = "✕"; // Altera de "☰" para "x" quando o menu é aberto
     }
 }
+
 
 document.addEventListener("click", function(event) {
     var menu = document.getElementById("menu");
@@ -214,3 +243,25 @@ let slides = document.querySelectorAll('.slideshow');
             timeoutID = setTimeout(autoSlides, 4000);
         }
         autoSlides();
+
+//habilidades
+function toggleOptions(id) {
+    // Remover a classe 'selected' de todos os botões
+    const botoes = document.querySelectorAll('.selecao_botao');
+    botoes.forEach(botao => {
+        botao.classList.remove('selected');
+    });
+
+    const botaoClicado = document.querySelector(`button[onclick="toggleOptions('${id}')"]`);
+    botaoClicado.classList.add('selected');
+
+    // Mostrar a opção correspondente e ocultar as outras
+    const opcoes = document.querySelectorAll('.opcoes');
+    opcoes.forEach(opcao => {
+        if (opcao.id === id) {
+            opcao.style.display = 'block';
+        } else {
+            opcao.style.display = 'none';
+        }
+    });
+}
