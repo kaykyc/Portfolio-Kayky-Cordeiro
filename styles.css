@@ -682,9 +682,12 @@ form button:hover {
 
 
 
+
 .selecao_botao.selected::after {
     width: 100%; 
 }
+
+
 
 
 
@@ -704,6 +707,7 @@ form button:hover {
 .footer_texto{
     color: #111;
 }
+
 
 /* Estilo para o menu */
 .menu {

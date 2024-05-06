@@ -56,24 +56,62 @@ function reescreverTexto() {
 // Inicia o efeito de digitação com o primeiro texto do array
 digitarTexto();
 
-function toggleOptions(id) {
+function toggleOptions(opcao) {
     var buttons = document.getElementsByClassName('selecao_botao');
     for (var i = 0; i < buttons.length; i++) {
-        if (buttons[i].id === id) {
-            buttons[i].classList.add('selected'); 
-        } else {
+        if (buttons[i].classList.contains('selected')) {
             buttons[i].classList.remove('selected'); 
         }
     }
 
+    var selectedButton = document.querySelector('.selecao_botao.' + opcao);
+    selectedButton.classList.add('selected');
+
     var options = document.getElementsByClassName('opcoes');
     for (var i = 0; i < options.length; i++) {
-        if (options[i].id === id) {
+        if (options[i].id === opcao) {
             options[i].style.display = 'block';
         } else {
             options[i].style.display = 'none';
         }
     }
+
+    // Mostra a barra
+    var barraSelecionada = document.getElementById('barra_selecionada');
+    barraSelecionada.style.display = 'block';
+    
+    // Ajusta a posição da barra
+    barraSelecionada.style.left = selectedButton.offsetLeft + 'px';
+}
+
+
+
+function toggleOptions(opcao) {
+    var buttons = document.getElementsByClassName('selecao_botao');
+    for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].classList.contains('selected')) {
+            buttons[i].classList.remove('selected'); 
+        }
+    }
+
+    var selectedButton = document.querySelector('.selecao_botao.' + opcao);
+    selectedButton.classList.add('selected');
+
+    var options = document.getElementsByClassName('opcoes');
+    for (var i = 0; i < options.length; i++) {
+        if (options[i].id === opcao) {
+            options[i].style.display = 'block';
+        } else {
+            options[i].style.display = 'none';
+        }
+    }
+
+    // Mostra a barra
+    var barraSelecionada = document.getElementById('barra_selecionada');
+    barraSelecionada.style.display = 'block';
+    
+    // Ajusta a posição da barra
+    barraSelecionada.style.left = selectedButton.offsetLeft + 'px';
 }
 
 
@@ -176,4 +214,3 @@ let slides = document.querySelectorAll('.slideshow');
             timeoutID = setTimeout(autoSlides, 4000);
         }
         autoSlides();
-
