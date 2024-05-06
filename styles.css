@@ -524,7 +524,6 @@ section {
 }
 
 section h2 {
-    color: black;
     font-size: 2.5rem;
     margin: 2rem;
 }
@@ -536,7 +535,6 @@ section form {
 }
 
 form label {
-    color:black;
     font-size: 17px;
     margin-bottom: 4px;
 }
@@ -573,7 +571,7 @@ form button {
     font-size: 16px;
     background: transparent;
     border: 2px solid var(--cor-secundaria);
-    color: black;
+    color: var(--cor-fonte-claro);
     transition: all 1s;
     margin-bottom: 20px;
 }
