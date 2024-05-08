@@ -535,7 +535,7 @@ section form {
 }
 
 form label {
-    font-size: 17px;
+    font-size: 1.063rem;
     margin-bottom: 4px;
 }
 
@@ -544,7 +544,7 @@ form input {
     outline: none;
     border: 0;
     margin-bottom: 20px;
-    font-size: 15px;
+    font-size: 0.938rem;
     transition: all 0.5s;
 }
 
@@ -556,7 +556,7 @@ form textarea {
     padding: 10px;
     outline: none;
     border: 0;
-    font-size: 15px;
+    font-size: 0.938rem;
     margin-bottom: 30px;
     transition: all 0.5s;
 }
@@ -568,7 +568,7 @@ form textarea:focus {
 form button {
     padding: 15px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     background: transparent;
     border: 2px solid var(--cor-secundaria);
     color: var(--cor-fonte-claro);
@@ -594,7 +594,7 @@ form button:hover {
 }
 
 .text {
-    font-size: 45px;
+    font-size: 2.813rem;
     color: var(--cor-secundaria);
     margin-bottom: 30px;
 }

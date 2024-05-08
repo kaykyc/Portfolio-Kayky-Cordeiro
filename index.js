@@ -3,8 +3,8 @@ var textos = [
     "React",
     'JavaScript',
     'Java',
-    'SpingBoot',
-    'Postgree',
+    'SpringBoot',
+    'PostgreSQL',
     'Python',
     'Bootstrap 5'
 ];
