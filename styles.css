@@ -180,7 +180,7 @@ footer {
     
 }
 header.rolagem{
-    background-color: #F2D6D6;
+    background-color: #b2c4dc;
 }
 
 header.rolagem.dark{
@@ -398,7 +398,7 @@ footer {
 
 .tela_inicial_esquerdo {
     position: absolute;
-    left: 4%; 
+    left: 7%; 
     top: 50%; 
     transform: translateY(-50%); 
     display: flex;
@@ -488,7 +488,7 @@ body {
     padding: 0;
     height: 100%;
     overflow: auto;
-    background-color: wheat;
+    background-color: rgb(216, 222, 231);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
